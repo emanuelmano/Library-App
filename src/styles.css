@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.login-form {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.form-control:focus {
+  border-color: #467fcf;
+  box-shadow: 0 0 8px rgba(70, 127, 207, 0.2);
+  outline: none;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #467fcf;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #356ab4;
+}

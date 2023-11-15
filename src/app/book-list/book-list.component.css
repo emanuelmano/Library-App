@@ -1,0 +1,129 @@
+.book-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.book-item {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book-details {
+  padding: 10px;
+}
+
+.book-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.book-author {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.book-price {
+  color: #888;
+  font-size: 0.9em;
+}
+/* Button Styles */
+button {
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; 
+}
+
+button[type="submit"] {
+  margin-top: 5px 0 5px 0;
+}
+
+button[type="button"] {
+  background-color: #6c757d; 
+  margin-right: 10px;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268; 
+}
+
+/* Specific styles for the cancel button */
+button.cancel-button {
+  background-color: #dc3545; 
+}
+
+button.cancel-button:hover {
+  background-color: #c82333; 
+}
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; 
+  margin: auto;
+}
+
+input[type="text"] {
+  border: 1px solid #ced4da; 
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px; 
+  font-size: 1em;
+}
+
+input[type="text"]:focus {
+  border-color: #80bdff; 
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Placeholder styles */
+input[type="text"]::placeholder {
+  color: #6c757d; 
+}
+
+/* Updating the form layout */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+

@@ -1,0 +1,41 @@
+<div class="book-list-container">
+  <div *ngFor="let book of books" class="book-item">
+    <img [src]="book.image" alt="{{ book.title }}" class="book-cover" />
+    <div class="book-details">
+      <h3 class="book-title">{{ book.title }}</h3>
+      <p class="book-author">Author: {{ book.subtitle }}</p>
+      <p class="book-price">Price: {{ book.price }}</p>
+      <button type="button" (click)="editBook(book)">Edit</button>
+      <button type="button" (click)="deleteBook(book.isbn13)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<form (ngSubmit)="addBook(newBook)">
+  <input
+    type="text"
+    [(ngModel)]="newBook.title"
+    name="title"
+    placeholder="Title"
+    required
+  />
+  <input
+    type="text"
+    [(ngModel)]="newBook.subtitle"
+    name="author"
+    placeholder="Author"
+    required
+  />
+
+  <div class="form-buttons">
+    <button type="submit">{{ editingBook ? "Update" : "Add" }}Book</button>
+    <button
+      type="button"
+      *ngIf="editingBook"
+      (click)="cancelEdit()"
+      class="cancel-button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>

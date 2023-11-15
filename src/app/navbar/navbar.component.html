@@ -1,0 +1,12 @@
+<nav *ngIf="isAuthenticated$ | async" class="navbar">
+  <div class="nav-links">
+    <a routerLink="/books">Books</a>
+    <a routerLink="/user-dashboard">Dashboard</a>
+  </div>
+
+  <div class="nav-search-logout">
+    <!-- Include the SearchComponent -->
+    <app-search (searchEvent)="handleSearch($event)"></app-search>
+    <button (click)="logout()">Logout</button>
+  </div>
+</nav>
